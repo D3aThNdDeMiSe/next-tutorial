@@ -1,5 +1,7 @@
-## Next.js App Router Course - Starter
+This is an implementation of Next JS' tutorial course. Some elements might differ from the original to account for my preferences.
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
+Most of the resources used in the project were pre provided by Next, and mostly only parts related to Next's useage were left incomplete, to be completed by the learner. These incomplete segments are being completed and push to git as pull requests per update.
 
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+Initial updates requests are missing since the project was created and developed locally initially and only pushed to git around chapter 6 of the tutorial.
+
+To initialize the project, use the command 'npm i' in the terminal at the directory where the project is located.
