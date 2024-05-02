@@ -4,6 +4,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { Suspense } from 'react';
 import { SearchSkeleton } from './skeletons';
+import { useDebouncedCallback} from 'use-debounce';
 
 export default function Search({ placeholder }: { placeholder: string }) {
   
@@ -11,7 +12,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const pathname = usePathname();
   const router = useRouter();
 
-  function handleSearch(userInput: string){
+  const handleSearch = useDebouncedCallback((userInput: string) => {
+
+    console.log(`Searching.... ${userInput}`)
 
     const params = new URLSearchParams(searchParams);
 
@@ -24,7 +27,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
     router.replace(`${pathname}?${params.toString()}`);
 
-}
+}, 300)
 
   return (
     <Suspense fallback={<SearchSkeleton/>}>
