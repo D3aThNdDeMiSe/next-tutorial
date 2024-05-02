@@ -216,3 +216,42 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function SearchSkeleton(){
+  return (
+      <div className="relative flex flex-1 flex-shrink-0">
+        <label htmlFor="search" className="sr-only">
+          Search
+        </label>
+        <div className="relative">
+          <input
+            className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+            placeholder="Searching..."
+            disabled // Disable input while loading
+          />
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg
+              className="animate-spin h-5 w-5 text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8zm0 0a8 8 0 018-8V2.5a.5.5 0 00-1 0V4a8 8 0 01-8 8z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+  );
+}
