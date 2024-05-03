@@ -17,6 +17,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     console.log(`Searching.... ${userInput}`)
 
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1');
 
     if(userInput){
       params.set('query', userInput);
